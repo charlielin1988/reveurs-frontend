@@ -5,7 +5,7 @@
   </div>
   <div class="info-wrapper">
     <h3>{{ exhibition.title }}</h3>
-    
+    <img :src="exhibition.picture" class="exhibition-picture" />
   </div>
 </div>
 </template>

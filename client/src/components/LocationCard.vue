@@ -1,5 +1,5 @@
 <template>
-  <div class="location-card">
+  <div class="location-card" @click="selectLocation(location.id)">
     <div class="image-wrapper">
     </div>
     <div class="info-wrapper">
@@ -15,6 +15,10 @@
 <script>
 export default {
   name:'LocationCard',
-  props: ['location']
+  props: ['location'],
+  methods: {selectLocation(locationId){
+    this.$emit('selectLocation', locationId)
+  }}
+
 }
 </script>
