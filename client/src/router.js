@@ -1,7 +1,9 @@
 import VueRouter from 'vue-router';
 import Home from './pages/Home.vue';
 import About from './pages/About.vue';
-import Locations from './pages/Locations.vue';
+import ExhibitionsByLocation from './pages/ExhibitionsByLocation';
+import AllExhibitions from './pages/AllExhibitions';
+import ExhibitionDetails from './pages/ExhibitionDetails';
 
 const routes = [
   {
@@ -15,9 +17,20 @@ const routes = [
     component: About
   },
   {
-    path: '/locations',
-    name: 'Locations',
-    component: Locations
+    path: '/exhibitions',
+    name: 'AllExhibitions',
+    component: AllExhibitions
+  },
+
+  {
+    path: '/details/exhibition_id',
+    name: 'ExhibitionDetails',
+    component: ExhibitionDetails
+  },
+  {
+    path: '/exhibitions-by-location/:location_id/:location_name',
+    name: 'ExhibitionByLocation',
+    component: ExhibitionsByLocation
   }
 ];
 
