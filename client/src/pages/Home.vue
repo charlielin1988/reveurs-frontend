@@ -9,7 +9,7 @@
 <script>
 import axios from 'axios'
 import LocationCard from '../components/LocationCard.vue'
-// const API_URL = process.env.VUE_APP_BASE_URL
+//  const API_URL = process.env.VUE_APP_BASE_URL
 
 export default {
   name: 'Home',
@@ -25,9 +25,9 @@ export default {
   },
   methods: {
     async getLocations() {
-      const res = await axios.get(`http:localhost:8000/locations`)
-      this.locations = res
-      console.log(res)
+      const res = await axios.get('http://localhost:8000/locations/')
+      this.locations = res.data
+      console.log(res.data)
     }
   }
   }
