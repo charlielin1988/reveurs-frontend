@@ -1,6 +1,6 @@
 <template>
   <div class="exhibition-content">
-    <section class="image-container">
+    <!-- <section class="image-container">
       <div>
         <img class="details-image" :src="exhibition.picture" :alt="exhibition.title" />
       </div>
@@ -11,27 +11,27 @@
           <h3>{{ exhibition.title }}</h3>
           <p> {{ exhibition.description }} </p>
           </div>
-        </section>
+        </section> -->
       </div>
 </template>
 
 <script>
-  import axios from 'axios'
+  // import axios from 'axios'
   
-  export default {
-    name:'ExhibitionDetails',
-    data: () => ({
-      exhibition: null
-    }),
-    mounted: async function() {
-      await this.getExhibitionDetails()
-    },
-    methods: {
-      async getExhibitionDetails() {
-        const exhibitionId = parseInt(this.$route.params.exhibition_id)
-        const res = await axios.get(`http://localhost:8000/items/${exhibitionId}`)
-        this.exhibition = res.data
-      }
-    }
-  }
+  // export default {
+  //   name:'ExhibitionDetails',
+  //   data: () => ({
+  //     exhibition: null
+  //   }),
+  //   mounted: async function() {
+  //     await this.getExhibitionDetails()
+  //   },
+  //   methods: {
+  //     async getExhibitionDetails() {
+  //       const exhibitionId = parseInt(this.$route.params.exhibition_id)
+  //       const res = await axios.get(`http://localhost:8000/exhibitions/${exhibitionId}`)
+  //       this.exhibition = res.data
+  //     }
+  //   }
+  // }
 </script>

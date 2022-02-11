@@ -1,7 +1,7 @@
 <template>
   <div class="view-locations">
-    <div v-for="exhibition in exhibitions" :key="exhibition.id"  >
-      <ExhibitionCard :exhibition="exhibition" />
+    <div class="exhibitions-container" v-for="exhibition in exhibitions" :key="exhibition.id">
+      <ExhibitionCard  :exhibition="exhibition" />
     </div>
   </div>
 </template>
@@ -15,18 +15,28 @@ export default {
   components: {
     ExhibitionCard
   },
-  props: {},
   data: () => ({
     exhibitions: [],
+    location: ''
   }),
-  mounted() {this.getExhibitionsByLocation()},
+  mounted: async function() {
+  await this.getExhibitionsByLocation()
+  this.getLocation()
+  },
   methods: {
   async getExhibitionsByLocation() {
-      const locationId = this.$route.params.location_id
-      const res = await axios.get(`http://localhost:8000/exhibitions/${locationId}`)
-      this.exhibitions = res.data
+      const locationId = parseInt(this.$route.params.location_id)
+      const res = await axios.get(`http://localhost:8000/locations/${locationId}`)
+      const exhibition_data = res.data.exhibitions
+      const response = await axios.get(exhibition_data)
+      let exhibitions = []
+      exhibitions.push(response.data)
+      this.exhibitions=exhibitions
+      console.log(response.data)
     },
-    
+    getLocation () {
+      this.location = this.$route.params.location_id
+    }
     
     
   }

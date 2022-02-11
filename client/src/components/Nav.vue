@@ -13,4 +13,14 @@ export default {
   name: 'Nav'
 }
 </script>
-<style scoped></style>
+<style scoped>
+header {
+  margin: 10px;
+}
+a {
+  margin-right:10px;
+}
+body {
+  background-color: black
+}
+</style>

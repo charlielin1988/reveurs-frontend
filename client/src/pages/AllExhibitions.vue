@@ -28,7 +28,7 @@ export default {
     async getExhibitions() {
       const res = await axios.get(`http://localhost:8000/exhibitions`)
       this.exhibitions = res.data
-      console.log(res.data)
+      // console.log(res.data)
     },
     
     selectExhibition(exhibitionId) {
