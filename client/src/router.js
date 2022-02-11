@@ -6,6 +6,7 @@ import AllExhibitions from './pages/AllExhibitions';
 import ExhibitionDetails from './pages/ExhibitionDetails';
 import AddLocationForm from './pages/AddLocationForm';
 import Locations from './pages/Locations';
+import Reviews from './pages/Reviews';
 
 const routes = [
   {
@@ -43,6 +44,11 @@ const routes = [
     path: '/locations',
     name: 'Locations',
     component: Locations
+  },
+  {
+    path: '/reviews',
+    name: 'Reviews',
+    component: Reviews
   }
 ];
 
