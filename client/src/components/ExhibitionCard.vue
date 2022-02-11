@@ -1,11 +1,12 @@
 <template>
-<div class ="exhibition-card">
+<div class ="exhibition-card" @click="selectExhibition(exhibition.id)">
   <div class="-image-wrapper">
-    <!-- <img class="card-image" :src="vestment.image" /> -->
+    <img :src="exhibition.picture" class="exhibition-picture" />
   </div>
   <div class="info-wrapper">
     <h3>{{ exhibition.title }}</h3>
-    <img :src="exhibition.picture" class="exhibition-picture" />
+    
+    <p> {{ exhibition.description }} </p>
   </div>
 </div>
 </template>
@@ -13,6 +14,13 @@
 <script>
 export default {
   name: 'ExhibitionCard',
-  props: ['exhibition']
+  props: {
+    exhibition: {}
+  },
+  methods: {
+    selectExhibition(exhibitionId){
+      this.$emit('selectExhibition', exhibitionId)
+    }
+  }
 }
 </script>

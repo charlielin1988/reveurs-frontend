@@ -1,8 +1,10 @@
 <template>
 <header>
   <nav>
-    <router-link to=“/”>Home</router-link>
-    <router-link to=“/about”>About</router-link>
+    <router-link to='/' name='Home'>Home</router-link>
+    <router-link to='/about' name='About'>About</router-link>
+    <router-link to='/addlocationform' name='AddLocationForm'>Add A Location</router-link>
+    <router-link to='/exhibitions'>Exhibitions</router-link>
   </nav>
 </header>
 </template>

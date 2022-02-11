@@ -1,9 +1,10 @@
 import VueRouter from 'vue-router';
 import Home from './pages/Home.vue';
 import About from './pages/About.vue';
-import ExhibitionsByLocation from './pages/ExhibitionsByLocation';
+import ViewExhibitions from './pages/ViewExhibitions';
 import AllExhibitions from './pages/AllExhibitions';
 import ExhibitionDetails from './pages/ExhibitionDetails';
+import AddLocationForm from './pages/AddLocationForm';
 
 const routes = [
   {
@@ -28,9 +29,14 @@ const routes = [
     component: ExhibitionDetails
   },
   {
-    path: '/exhibitions-by-location/:location_id/:location_name',
-    name: 'ExhibitionByLocation',
-    component: ExhibitionsByLocation
+    path: '/exhibitions/:location_id',
+    name: 'ViewExhibitions',
+    component: ViewExhibitions
+  },
+  {
+    path: '/addlocationform',
+    name: 'AddLocationForm',
+    component: AddLocationForm
   }
 ];
 
