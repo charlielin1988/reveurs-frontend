@@ -1,11 +1,27 @@
 <template>
   <div class = "reviews-card">
-  <!-- Review Title and content here -->
-  </div>
+  
+    <div class="-image-wrapper">
+      <img :src="review.picture" class="exhibition-picture" />
+    </div>
+    <div class="info-wrapper">
+      <h3>{{ review.title }}</h3>
+    
+      <p> {{ review.content }} </p>
+    </div>
+</div>
+
 </template>
 
 <script>
-import axios from 'axios'
+  export default {
+  name: 'ReviewCard',
+  props: 
+  {
+  review: {}
+  
+}
+}
 
 
 </script>

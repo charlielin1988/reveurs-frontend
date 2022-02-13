@@ -5,6 +5,7 @@
     <router-link to='/about' name='About'>About</router-link>
     <router-link to='/addlocationform' name='AddLocationForm'>Add A Location</router-link>
     <router-link to='/exhibitions'>Exhibitions</router-link>
+    <router-link to='/reviews'>Reveurs Recommend</router-link>
   </nav>
 </header>
 </template>
@@ -20,7 +21,5 @@ header {
 a {
   margin-right:10px;
 }
-body {
-  background-color: black
-}
+
 </style>

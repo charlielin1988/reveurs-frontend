@@ -102,3 +102,10 @@ export default {
   }
 
 </script>
+<style>
+
+.card-image{
+ max-height:25vh;
+ max-width:25vw;
+}
+</style>
