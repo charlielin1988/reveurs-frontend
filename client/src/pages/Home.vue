@@ -28,12 +28,11 @@
   </div>
 </div>
 </template>
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lancelot&display=swap');
 body {
-  background-image:url('https://ksr-ugc.imgix.net/assets/026/444/426/68bac08f7d360a22e79661a3bd756623_original.jpg?ixlib=rb-2.1.0&crop=faces&w=1552&h=873&fit=crop&v=1568247548&auto=format&frame=1&q=92&s=eca8dddadd925734d85f1617c6249502');
-  background-size:cover;
+  background-image: url('~@/assets/background.jpeg');
+  background-size:cover
 }
 .link-image {
   height:20vh;
