@@ -1,5 +1,6 @@
 <template>
   <div class = "location-container">
+    
     <div class="location-card" @click="selectLocation(location.id, location.city)">
       <div class="info-wrapper">
         <h3>{{ location.city }}</h3>
@@ -107,8 +108,11 @@ export default {
 <style>
 
 .card-image{
- max-height:15vh;
- max-width:15vw;
+ height:15vh;
+ width: 15vw;
+ border-radius: 50%;
+ 
+ 
 }
 
 </style>

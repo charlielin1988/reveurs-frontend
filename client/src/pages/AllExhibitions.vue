@@ -39,8 +39,17 @@ export default {
 </script>
 
 <style>
-body {
-  color:white;
+.view-locations {
+  color: wheat;
+  background-color: black;
+  
+}
+.exhibitions-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  text-align:center;
+  align-items:baseline;
+  justify-content:space-around;
 }
 </style>
 

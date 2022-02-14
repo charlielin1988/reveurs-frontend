@@ -3,7 +3,6 @@ import Home from './pages/Home.vue';
 import About from './pages/About.vue';
 import ViewExhibitions from './pages/ViewExhibitions';
 import AllExhibitions from './pages/AllExhibitions';
-import ExhibitionDetails from './pages/ExhibitionDetails';
 import AddLocationForm from './pages/AddLocationForm';
 import Locations from './pages/Locations';
 import ReviewPage from './pages/ReviewPage';
@@ -25,11 +24,6 @@ const routes = [
     component: AllExhibitions
   },
 
-  {
-    path: '/details/exhibition_id',
-    name: 'ExhibitionDetails',
-    component: ExhibitionDetails
-  },
   {
     path: '/exhibitions/:location_id',
     name: 'ViewExhibitions',

@@ -17,7 +17,8 @@ export default {
   },
   data: () => ({
     exhibitions: [],
-    location: ''
+    location: '',
+    
   }),
   mounted: async function() {
   await this.getExhibitionsByLocation()

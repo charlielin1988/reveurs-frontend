@@ -6,10 +6,14 @@
     <section class ="location-card-container">
       <LocationCard v-for="location in locations" :key="location.id" :location="location" @selectLocation="selectLocation" @handleDelete="handleDelete"
       />
-      
+      <button class="add-location">
+      <a href="http://localhost:8080/addlocationform"></a>
+      Add Location
+    </button>
     </section>
-  </div>
+    
   
+  </div>
 </div>
 
 </template>
@@ -53,17 +57,29 @@ export default {
 color: wheat;
 }
 .location-card-container {
-  background-color: grey; opacity: .5;
   display:grid;
   grid-template-columns:repeat(3, 1fr);
   align-items:baseline;
   justify-items:center;
   margin-left:10%;
   margin-right:10%;
+  text-align:center;
 }
 h2 {
   text-align:center;
   margin-top:5%;
   margin-bottom:3%;
 }
+.add-location {
+  height: 8vh;
+  width: 50%;
+  margin: auto;
+  background-color:black;
+  color:wheat;
+  border-radius:50%;
+  }
+  .button {
+    
+    margin:auto;
+  }
 </style>
