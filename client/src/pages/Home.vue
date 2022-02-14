@@ -3,11 +3,13 @@
   <div class="homepage-header">
     <h2>Reveurs Collective</h2>
   </div>
-  <video controls>
+  <div class="video-container">
+  <video class="video" width="auto" height="300" poster="../assets/logo.png" controls>
    <source  src = "../assets/thenightcircus.mp4"
   type="video/mp4">
   </video>
-  <div class="link-container">
+  </div>
+  <!-- <div class="link-container">
     <div class="location-image">
       <a href ="http://localhost:8080/locations">
         <div class="link-image">
@@ -29,7 +31,8 @@
       </a>
       <h4>About</h4>
     </div>
-  </div>
+  </div> -->
+  <p class="tagline"> Magic.  Mystery.  Rivalry.  Love.  Welcome To The Cirque Des Rêves.  What will you discover here?</p>
 </div>
 </template>
 <style>
@@ -37,9 +40,12 @@
 body {
   background-image: url('~@/assets/background.jpeg');
   background-size:cover;
+  background-position:center;
+  height:100vh;
+  width:100vw;
   
 }
-.link-image {
+/* .link-image {
   height:20vh;
   width:20vh;
   background-image: url('https://i.pinimg.com/originals/26/f7/0b/26f70baef901de175d738a67f9a9ff86.png');
@@ -78,17 +84,29 @@ body {
   margin:1em;
   align-items:center;
   justify-content:center;
-}
+} */
 
 a {
-  text-decoration: none
+  text-decoration: none;
+  color:wheat;
 }
 .homepage-header {
 text-align:center;
 font-family: 'Lancelot', cursive;
 color: white;
+margin-top: 10%;
+margin-bottom: 5%;
+font-size: larger;
+word-spacing: 10px;
+letter-spacing:10px;
+color: wheat;
+
 }
-.link-container {
+.home-page {
+  height: 100vh;
+  width: 100vw;
+}
+/* .link-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   flex-wrap: wrap;
@@ -97,6 +115,21 @@ color: white;
   font-family: 'Lancelot', cursive;
   width:50%;
   margin:auto
+} */
+.video-container{
+opacity: .5;
+width:50%;
+margin:auto;
+
+}
+.tagline {
+  text-align: center;
+  margin-top: 5%;
+  word-spacing: 10px;
+  font-family: 'Lancelot', cursive;
+  font-size: larger;
+  font-style: italic;
+  color:wheat;
 }
 
 </style>
