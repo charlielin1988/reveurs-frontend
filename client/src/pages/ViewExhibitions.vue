@@ -42,3 +42,10 @@ export default {
   }
 }
 </script>
+
+<style>
+body {
+  color:white;
+}
+</style>
+

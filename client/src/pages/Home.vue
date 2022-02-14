@@ -3,6 +3,10 @@
   <div class="homepage-header">
     <h2>Reveurs Collective</h2>
   </div>
+  <video controls>
+   <source  src = "../assets/thenightcircus.mp4"
+  type="video/mp4">
+  </video>
   <div class="link-container">
     <div class="location-image">
       <a href ="http://localhost:8080/locations">
@@ -32,7 +36,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lancelot&display=swap');
 body {
   background-image: url('~@/assets/background.jpeg');
-  background-size:cover
+  background-size:cover;
+  
 }
 .link-image {
   height:20vh;
@@ -41,6 +46,11 @@ body {
   background-size: cover;
   border-radius: 50%;
   box-shadow: 0 0 8px 8px gray inset;
+  display:flex;
+  align-items:center;
+  margin:1em;
+  justify-content:center;
+  
  
 }
 .link-image-exhibitions {
@@ -50,6 +60,10 @@ body {
   background-size: cover;
   border-radius: 50%;
   box-shadow: 0 0 8px 8px gray inset;
+  display:flex;
+  align-items:center;
+  margin:1em;
+  justify-content:center;
  
 }
 
@@ -60,7 +74,10 @@ body {
   background-size: cover;
   border-radius: 50%;
   box-shadow: 0 0 8px 8px gray inset;
- 
+  display:flex;
+  margin:1em;
+  align-items:center;
+  justify-content:center;
 }
 
 a {
@@ -69,6 +86,17 @@ a {
 .homepage-header {
 text-align:center;
 font-family: 'Lancelot', cursive;
+color: white;
+}
+.link-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  color:white;
+  gap: 1rem;
+  font-family: 'Lancelot', cursive;
+  width:50%;
+  margin:auto
 }
 
 </style>

@@ -6,7 +6,7 @@ import AllExhibitions from './pages/AllExhibitions';
 import ExhibitionDetails from './pages/ExhibitionDetails';
 import AddLocationForm from './pages/AddLocationForm';
 import Locations from './pages/Locations';
-import Reviews from './pages/Reviews';
+import ReviewPage from './pages/ReviewPage';
 
 const routes = [
   {
@@ -47,8 +47,8 @@ const routes = [
   },
   {
     path: '/reviews',
-    name: 'Reviews',
-    component: Reviews
+    name: 'ReviewPage',
+    component: ReviewPage
   }
 ];
 

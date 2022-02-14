@@ -2,7 +2,7 @@
   <div class = "reviews-card">
   
     <div class="-image-wrapper">
-      <img :src="review.picture" class="exhibition-picture" />
+      <!-- <img :src="review.picture" class="exhibition-picture" /> -->
     </div>
     <div class="info-wrapper">
       <h3>{{ review.title }}</h3>
@@ -17,11 +17,10 @@
   export default {
   name: 'ReviewCard',
   props: 
-  {
-  review: {}
+  ['review']
   
 }
-}
+
 
 
 </script>
