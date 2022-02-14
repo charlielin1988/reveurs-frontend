@@ -22,14 +22,12 @@ import LocationCard from '../components/LocationCard.vue'
 // const API_URL=process.env.VUE_APP_BASE_URL
 
 export default {
-  name: 'Home',
+  name: 'Locations',
   components: {LocationCard},
   data: () => ({
     locations: [],
-    searchQuery: '',
-    searchResults: null,
-    searched: false,
-   
+    location: {}
+    
     
   }),
   mounted(){ this.getLocations()
@@ -40,26 +38,32 @@ export default {
       this.locations = res.data
       //  console.log(res.data)
     },
-    
-   
-   },
     selectLocation(locationId) {
       this.$router.push(`/exhibitions/${locationId}`)
-    
     },
-    
-    
-
-     handleDelete(id) {
+    handleDelete(id) {
       this.location = this.location.filter(location => location.id !==id)
-    },
-    
+    }
   }
-  
+}
 </script>
 
 <style>
-body {
-  color:white;
+.locations {
+color: wheat;
+}
+.location-card-container {
+  background-color: grey; opacity: .5;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  align-items:baseline;
+  justify-items:center;
+  margin-left:10%;
+  margin-right:10%;
+}
+h2 {
+  text-align:center;
+  margin-top:5%;
+  margin-bottom:3%;
 }
 </style>
