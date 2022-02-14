@@ -10,7 +10,9 @@
     </div>
     <button @click="deleteLocation" class="delete-button">Delete Location</button>
     </div>
-    <div class = "updateForm">
+    <div class ="showUpdate">
+    <button @click="showUpdate = !showUpdate" class="show">Update Location</button>
+    <div v-if="showUpdate" class= "updateForm">
         <form @submit="submitForm">
           <input
           type="text"
@@ -37,8 +39,9 @@
           @input="handleUpdate"
           />
         
-            <button type="submit" >Update Location</button>
+            <button type="submit" >Submit Changes</button>
         </form>
+      </div>
     </div>
   
   </div>
@@ -55,7 +58,8 @@ export default {
     city: '',
     start_date: '',
     end_date: '',
-    location_picture: ''
+    location_picture: '',
+    showUpdate: false
   }),
   methods: {
     
@@ -77,6 +81,7 @@ export default {
       e.preventDefault()
       const updatedLocation =
       {
+        showUpdate:true,
         "city": this.city,
         "start_date": this.start_date,
         "end_date": this.end_date,
