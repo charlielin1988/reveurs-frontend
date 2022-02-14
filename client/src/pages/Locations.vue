@@ -17,6 +17,8 @@
 import axios from 'axios'
 import LocationCard from '../components/LocationCard.vue'
 
+
+
 // const API_URL=process.env.VUE_APP_BASE_URL
 
 export default {
@@ -39,8 +41,8 @@ export default {
       //  console.log(res.data)
     },
     
-    
-
+   
+   },
     selectLocation(locationId) {
       this.$router.push(`/exhibitions/${locationId}`)
     
@@ -53,7 +55,7 @@ export default {
     },
     
   }
-  }
+  
 </script>
 
 <style>

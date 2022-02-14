@@ -3,7 +3,7 @@
     <div class="location-card" @click="selectLocation(location.id, location.city)">
     <div class="info-wrapper">
       <h3>{{ location.city }}</h3>
-      <h4>{{ location.start_date }} {{ location.start_date }} </h4>
+      <h4>{{ location.start_date |formatDate }} {{ location.end_date |formatDate }} </h4>
     </div >
     <div class="image-wrapper">
       <img class="card-image" :src="location.location_picture" :alt="location.city" />
@@ -58,6 +58,7 @@ export default {
     location_picture: ''
   }),
   methods: {
+    
     async deleteLocation() {
       await axios.delete(`http://localhost:8000/locations/${this.location.id}`,{
         auth: {
@@ -71,6 +72,7 @@ export default {
       this[e.target.name] = e.target.value
       },
     
+},
     async submitForm (e) {
       e.preventDefault()
       const updatedLocation =
@@ -99,7 +101,7 @@ export default {
       },
     
     }
-  }
+  
 
 </script>
 <style>

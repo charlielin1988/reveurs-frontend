@@ -1,25 +1,29 @@
 <template>
-<header>
-  <nav>
-    <router-link to='/' name='Home'>Home</router-link>
+  <header>
+    <nav>
+      <router-link to='/' name='Home'>Home</router-link>
     <router-link to='/about' name='About'>About</router-link>
-    <router-link to='/addlocationform' name='AddLocationForm'>Add A Location</router-link>
+      <router-link to='/locations' name='Locations'>Locations</router-link>
     <router-link to='/exhibitions'>Exhibitions</router-link>
-    <router-link to='/reviews'>Reveurs Recommend</router-link>
-  </nav>
-</header>
+      <router-link to='/reviews'>Reveurs Recommend</router-link>
+    </nav>
+  </header>
 </template>
+
 <script>
+
 export default {
-  name: 'Nav'
+  name: 'Nav',
+  
 }
 </script>
 <style scoped>
-header {
-  margin: 10px;
+nav {
+  display:flex;
+  justify-content:space-around;
+  
+  
 }
-a {
-  margin-right:10px;
-}
+
 
 </style>
