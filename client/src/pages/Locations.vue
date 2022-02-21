@@ -6,10 +6,11 @@
     <section class ="location-card-container">
       <LocationCard v-for="location in locations" :key="location.id" :location="location" @selectLocation="selectLocation" @handleDelete="handleDelete"
       />
-      <button class="add-location">
-      <a href="http://localhost:8080/addlocationform"></a>
-      Add Location
-    </button>
+      <a href="http://localhost:8080/addlocationform">
+      <button class="add-location">Add Location </button>
+      </a>
+      
+   
     </section>
     
   

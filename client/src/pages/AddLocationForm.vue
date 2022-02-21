@@ -1,7 +1,7 @@
 <template>
 <div class = 'add-location'>
-  <div class='location-prediction-form'>
-  <h4> Have An Inkling Where The Cirque Des Reves Will Be Appearing Next? Add Your Prediction Here:</h4>
+  <div class='location-form'>
+  <h4 class="form-header"> Have An Inkling Where The Cirque Des Reves Will Be Appearing Next? Add Your Prediction Here:</h4>
   <form @submit="formSubmit" >
     The Cirque Des Reves Will Appear Next In:
    <input
@@ -36,9 +36,9 @@
   <button type="submit">Add Prediction</button>
   </form>
   </div>
-  <div class='location-prediction-form'>
+  <div class='location-form'>
     <br/>
-  <h4> Wish To Tell Us Of Your Cirque Sighting?</h4>
+  <h4 class="form-header"> Wish To Tell Us Of Your Cirque Sighting?</h4>
   <form @submit="formSubmit" >
     I Saw The Cirque Des Reves In:
    <input
@@ -115,3 +115,17 @@ export default {
 
 }
 </script>
+<style>
+.location-form {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  line-height: 5vh;
+  font-size: larger;
+}
+
+.form-header {
+  margin-bottom: 10%;
+  font-size:larger;
+  
+}
+</style>

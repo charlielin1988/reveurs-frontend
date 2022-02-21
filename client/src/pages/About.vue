@@ -13,16 +13,18 @@ body {
   font-family:"Lancelot", cursive;
 }
 h1 {
-  margin-top: 10%;
+  margin-top: 15%;
   text-align:center;
 }
 .about {
   word-spacing:auto;
-  font-size:1.5em;
+  font-size:1.2em;
   margin-left:10%;
   margin-right:10%;
   line-height:3.5vh;
   font-family:"Lancelot", cursive;
   font-style:bold;
+  color: wheat;
+  text-align:center
 }
 </style>

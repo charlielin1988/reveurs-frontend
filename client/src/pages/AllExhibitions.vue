@@ -1,6 +1,6 @@
 <template>
   <div class="view-locations">
-    <h1>Exhibitions</h1>
+    <h1 class="exhibitions">Exhibitions</h1>
     
     <div class="exhibitions-container">
       <ExhibitionCard v-for="exhibition in exhibitions" :key="exhibition.id" :exhibition="exhibition" @click.native="selectExhibition(exhibition.id)" />
@@ -41,15 +41,16 @@ export default {
 <style>
 .view-locations {
   color: wheat;
-  background-color: black;
+  background-color: black; opacity:.8;
+  
   
 }
 .exhibitions-container {
   display: grid;
   grid-template-rows: 1fr;
   text-align:center;
-  align-items:baseline;
   justify-content:space-around;
+  
 }
 </style>
 
