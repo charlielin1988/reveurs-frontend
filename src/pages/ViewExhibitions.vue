@@ -1,7 +1,7 @@
 <template>
   <div class="view-locations">
-    <div class="exhibitions-container" v-for="exhibition in exhibitions" :key="exhibition.id">
-      <ExhibitionCard  :exhibition="exhibition" />
+    <div class="exhibitions-container" v-for="exhibition in exhibitions" :key="exhibition.id" >
+      <ExhibitionCard :exhibition="exhibition" @click.native="selectExhibition(exhibition.id)" />
     </div>
   </div>
 </template>
@@ -37,11 +37,16 @@ export default {
     },
     getLocation () {
       this.location = this.$route.params.location_id
+    },
+    selectExhibition(exhibitionId) {
+      this.$router.push(`/details/${exhibitionId}`)
+    }
+
     }
     
     
   }
-}
+
 </script>
 
 <style>

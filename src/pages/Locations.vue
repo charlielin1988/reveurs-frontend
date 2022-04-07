@@ -1,26 +1,28 @@
 <template>
 <div>
   
-  <div class='locations'>
-    <h2>Locations</h2>
+  <h2>Locations</h2>
+    <div class="add-location-button">
+        <a href="http://localhost:8080/addlocationform">
+      <button class="add-location">Add Location</button>
+        </a>
+      </div>
     <section class ="location-card-container">
       <LocationCard v-for="location in locations" :key="location.id" :location="location" @selectLocation="selectLocation" @handleDelete="handleDelete"
       />
-      <a href="http://localhost:8080/addlocationform">
-      <button class="add-location">Add Location </button>
-      </a>
       
-   
+      
     </section>
     
   
-  </div>
+  
 </div>
 
 </template>
 <script>
 import axios from 'axios'
 import LocationCard from '../components/LocationCard.vue'
+
 
 
 
@@ -44,7 +46,7 @@ export default {
       //  console.log(res.data)
     },
     selectLocation(locationId) {
-      this.$router.push(`/exhibitions/${locationId}`)
+      this.$router.push(`/exhibitions-by-location/${locationId}`)
     },
     handleDelete(id) {
       this.location = this.location.filter(location => location.id !==id)
@@ -71,16 +73,22 @@ h2 {
   margin-top:5%;
   margin-bottom:3%;
 }
+.add-location-button {
+  width:100%;
+  margin-left:46%;
+  margin-top:0%;
+  
+}
 .add-location {
   height: 8vh;
-  width: 50%;
-  margin: auto;
-  background-color:black;
-  color:wheat;
+  width: 8vw;
+  font-family: 'Lancelot', cursive;
+  font-size:1.5em;
+  font-weight:bolder;
+  background-color:rgba(0, 0, 0, 0);
   border-radius:50%;
+  color:wheat;
   }
-  .button {
-    
-    margin:auto;
-  }
+  
+
 </style>

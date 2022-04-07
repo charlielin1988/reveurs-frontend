@@ -9,9 +9,11 @@
       <div class="image-wrapper">
         <img class="card-image" :src="location.location_picture" :alt="location.city" />
       </div>
-      <button @click="deleteLocation" class="delete-button">Delete Location</button>
-      <div class ="showUpdate">
-      <button @click="showUpdate = !showUpdate" class="show">Update Location</button>
+      <div class="button-container">
+        <button @click="deleteLocation" class="delete-button">Delete Location</button>
+        <div class ="showUpdate">
+        <button @click="showUpdate = !showUpdate" class="show">Update Location</button>
+      </div>
         <div v-if="showUpdate" class= "updateForm">
           <form @submit="submitForm">
             <input
@@ -99,20 +101,51 @@ export default {
     },
     selectLocation(locationId) {
     this.$emit('selectLocation', locationId)
-      }
+      },
+    
     
     }
   
-}
+  }
+
 </script>
 <style>
 
 .card-image{
- height:15vh;
- width: 15vw;
- border-radius: 50%;
- 
- 
+  height:15vh;
+  width: 15vw;
+  border-radius: 50%;
+  margin-bottom:2%;
+}
+.show{
+  background-color:rgba(0, 0, 0, 0.557);
+  color:wheat;
+  border-radius:50%;
+  height: 5vh;
+  width:5vw;
+}
+.delete-button{
+  background-color:rgba(53, 3, 3, 0.612);
+  color:wheat;
+  border-radius:50%;
+  height: 5vh;
+  width:5vw;
+}
+.button-container{
+  display:flex;
+  justify-content:center;
+  column-gap:10px;
+  
+}
+.city {
+  font-size:1.5em;
+  margin-bottom:0%;
+  
+}
+.date {
+  font-size:1.3em;
+  margin-top:3%;
+  margin-bottom:2%;
 }
 
 </style>

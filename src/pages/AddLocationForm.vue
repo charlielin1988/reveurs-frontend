@@ -1,10 +1,11 @@
 <template>
-<div class = 'add-location'>
+<div class = 'add-location-form'>
+  
   <div class='location-form'>
   <h4 class="form-header"> Have An Inkling Where The Cirque Des Reves Will Be Appearing Next? Add Your Prediction Here:</h4>
   <form @submit="formSubmit" >
     The Cirque Des Reves Will Appear Next In:
-   <input
+  <input
   type = "text"
   :value="city"
   name="city"
@@ -89,9 +90,13 @@ export default {
     end_date: '',
     location_picture: ''
   }),
+  mounted() {
+    this.getLocations()
+  },
   methods: {
-    handleAdd(e) {
-      this[e.target.name] = e.target.value
+    async getLocations() {
+    const res = await axios.get('http://localhost:8000/locations/')
+    this.locations = res.data
     },
     formSubmit(e) {
       e.preventDefault();
@@ -99,7 +104,8 @@ export default {
         "city": this.city,
         "start_date": this.start_date,
         "end_date": this.end_date,
-        "location_picture": this.location_picture
+        "location_picture": this.location_picture,
+        
       };
       console.log(newLocation);
       axios.post(`http://localhost:8000/locations/`, newLocation, {
@@ -108,23 +114,32 @@ export default {
           password: 'magician'
         }
       })
-      this.$router.push(`/locations`)
-      this.$router.go()
-    }
+      this.$router.push(`/locations/`)
+    
+      
+      
+      
+      
+      
+    },
+      
   }
 
 }
 </script>
 <style>
+.add-location-form {
+  text-align:center;
+  color:wheat;
+}
 .location-form {
-  margin-top: 10%;
-  margin-bottom: 10%;
   line-height: 5vh;
   font-size: larger;
 }
 
 .form-header {
-  margin-bottom: 10%;
+  margin-top:5%;
+  margin-bottom: 5%;
   font-size:larger;
   
 }
