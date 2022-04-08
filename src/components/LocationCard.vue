@@ -3,8 +3,8 @@
     
     <div class="location-card" @click="selectLocation(location.id, location.city)">
       <div class="info-wrapper">
-        <h3>{{ location.city }}</h3>
-        <h4>{{ location.start_date |formatDate }} - {{ location.end_date |formatDate }} </h4>
+        <h3 class="city-name">{{ location.city }}</h3>
+        <h4 class="date">{{ location.start_date |formatDate }} - {{ location.end_date |formatDate }} </h4>
       </div >
       <div class="image-wrapper">
         <img class="card-image" :src="location.location_picture" :alt="location.city" />
@@ -137,15 +137,16 @@ export default {
   column-gap:10px;
   
 }
-.city {
+.city-name {
   font-size:1.5em;
-  margin-bottom:0%;
+  letter-spacing: .15em;
+  margin-bottom: 0%;
+  
   
 }
 .date {
   font-size:1.3em;
-  margin-top:3%;
-  margin-bottom:2%;
+  margin-top: 0%;
 }
 
 </style>

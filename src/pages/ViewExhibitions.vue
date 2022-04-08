@@ -1,8 +1,12 @@
 <template>
-  <div class="view-locations">
-    <div class="exhibitions-container" v-for="exhibition in exhibitions" :key="exhibition.id" >
+  <div class="exhibitions-all">
+    <h1 class="exhibitions">Exhibitions</h1>
+   
+    <section class="exhibitions-info">
+      <div class="exhibitions-container" v-for="exhibition in exhibitions" :key="exhibition.id" >
       <ExhibitionCard :exhibition="exhibition" @click.native="selectExhibition(exhibition.id)" />
-    </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -50,8 +54,6 @@ export default {
 </script>
 
 <style>
-body {
-  color:white;
-}
+
 </style>
 

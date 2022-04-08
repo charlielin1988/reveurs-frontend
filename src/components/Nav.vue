@@ -21,9 +21,11 @@ export default {
 nav {
   display:flex;
   justify-content:space-around;
-  
-  
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-top: .15em;
 }
+
 
 
 </style>

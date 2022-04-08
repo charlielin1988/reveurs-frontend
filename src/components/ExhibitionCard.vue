@@ -42,7 +42,6 @@ selectExhibition(exhibitionId) {
 .exhibition-picture {
   max-height: 20vh;
   max-width: 20vw;
-  border-radius: 100%;
   box-shadow: .5em .5em .5em rgba(245, 222, 179, 0.371)
 }
 .exhibition-title {

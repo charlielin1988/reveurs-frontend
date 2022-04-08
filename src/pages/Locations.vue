@@ -1,7 +1,7 @@
 <template>
-<div>
+<div class="locations">
   
-  <h2>Locations</h2>
+  <h2 class="location-page-title">Locations</h2>
     <div class="add-location-button">
         <a href="http://localhost:8080/addlocationform">
       <button class="add-location">Add Location</button>
@@ -61,17 +61,19 @@ color: wheat;
 }
 .location-card-container {
   display:grid;
-  grid-template-columns:repeat(3, 1fr);
+  grid-template-columns:repeat(auto-fit, minmax(15vw, 1fr));
   align-items:baseline;
-  justify-items:center;
-  margin-left:10%;
-  margin-right:10%;
+  margin-left:10em;
+  margin-right:10em;
   text-align:center;
+  column-gap: 3em;
 }
-h2 {
+.location-page-title {
   text-align:center;
-  margin-top:5%;
-  margin-bottom:3%;
+  margin-top:2.5em;
+  margin-bottom:.5em;
+  font-size: 2.5em;
+  letter-spacing: .5em;
 }
 .add-location-button {
   width:100%;
